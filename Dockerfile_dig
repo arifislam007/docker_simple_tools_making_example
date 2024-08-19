@@ -1,0 +1,8 @@
+# Use the Alpine base image
+FROM alpine:latest
+
+# Install bind-tools which includes dig
+RUN apk add --no-cache bind-tools
+
+# Set the entry point to dig
+ENTRYPOINT ["dig"]
