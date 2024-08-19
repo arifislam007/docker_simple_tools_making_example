@@ -1,0 +1,8 @@
+# Use the Alpine base image
+FROM alpine:latest
+
+# Install busybox-extras which includes telnet
+RUN apk add --no-cache busybox-extras
+
+# Set the entry point to telnet
+ENTRYPOINT ["telnet"]
