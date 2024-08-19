@@ -1,0 +1,11 @@
+# Use the Alpine base image
+FROM alpine:latest
+
+# Install mysql client
+RUN apk add --no-cache mysql-client
+
+# Set the entry point to mysql
+ENTRYPOINT ["mysql"]
+
+# Default command to run
+CMD ["--help"]
